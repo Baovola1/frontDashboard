@@ -84,7 +84,6 @@ export default function Sidebar({drawerWidth, sidebarOpen,isNonMobile,setSidebar
         </List>
       </Box>
     </Drawer>
-
       )}
     </Box>
       

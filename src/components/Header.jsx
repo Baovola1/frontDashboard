@@ -24,7 +24,7 @@ import {
 
 
 
-export default function Header() {
+export default function Header({sidebarOpen, setSidebarOpen}) {
   const dispatch = useDispatch();
   const theme = useTheme();
 
@@ -40,7 +40,7 @@ export default function Header() {
         <Toolbar sx={{ justifyContent: "space-between" }}>
           {/*Left side*/}
           <FlexBetween>
-            <IconButton onClick={() => console.log("open/close sidebar")}>
+            <IconButton onClick={() => setSidebarOpen(!sidebarOpen)}>
               <MenuIcon />
             </IconButton>
             <FlexBetween
