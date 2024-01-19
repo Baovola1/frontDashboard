@@ -13,7 +13,16 @@ const store = configureStore({
     global: globalReducer,
     [api.reducerPath]: api.reducer,
   },
-  middleware:(getDefault) => getDefault().concat(api.middleware)
+  
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+      serializableCheck: {
+        // Ignore les vérifications de sérialisation pour les requêtes et réponses RTK Query
+        ignoredActions: ['api/executeQuery', 'api/fulfilled'],
+        // Augmenter le seuil de temps pour l'avertissement
+        warnAfter: 100,
+      },
+    }).concat(api.middleware),
 });
 setupListeners(store.dispatch);
 
