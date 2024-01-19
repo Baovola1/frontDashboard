@@ -23,8 +23,8 @@ export default function Layout() {
           sidebarOpen={sidebarOpen}
           setSidebarOpen={setSidebarOpen}
         />
-        <Box>
-          <Header sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
+        <Box flexGrow={1}>
+          <Header user={data || {}}  sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
           <Outlet />
         </Box>
       
