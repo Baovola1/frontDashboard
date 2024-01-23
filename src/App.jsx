@@ -10,6 +10,8 @@ import Products from "./scenes/Products";
 import Customers from "./scenes/Customers";
 import Transactions from "./scenes/Transactions";
 import Locations from "./scenes/Locations";
+import Overview from "./scenes/Overview";
+
 
 
 function App() {
@@ -29,6 +31,7 @@ function App() {
               <Route path="/customers" element={<Customers/>} />
               <Route path="/transactions" element={<Transactions/>} />
               <Route path="/geography" element={<Locations/>} />
+              <Route path="/overview" element={<Overview/>} />
             </Route>
           </Routes>
         </ThemeProvider>
