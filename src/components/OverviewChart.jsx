@@ -127,7 +127,7 @@ export default function OverviewChart({isDashboard=false, view}) {
   pointBorderWidth={2}
   pointBorderColor={{ from: "serieColor" }}
   pointLabelYOffset={-12}
-  useMesh={true}
+  useMesh={false}
   legends={
     !isDashboard
       ? [

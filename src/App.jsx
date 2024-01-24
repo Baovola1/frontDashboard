@@ -11,6 +11,8 @@ import Customers from "./scenes/Customers";
 import Transactions from "./scenes/Transactions";
 import Locations from "./scenes/Locations";
 import Overview from "./scenes/Overview";
+import Daily from "./scenes/Daily";
+import Monthly from "./scenes/Monthly";
 
 
 
@@ -32,6 +34,8 @@ function App() {
               <Route path="/transactions" element={<Transactions/>} />
               <Route path="/geography" element={<Locations/>} />
               <Route path="/overview" element={<Overview/>} />
+              <Route path="/daily" element={<Daily/>} />
+              <Route path="/monthly" element={<Monthly/>} />
             </Route>
           </Routes>
         </ThemeProvider>
