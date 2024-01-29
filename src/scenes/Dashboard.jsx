@@ -68,11 +68,18 @@ const columns = [
     <Box>
           <Button
             sx={{
-              backgroundColor: theme.palette.secondary.light,
-              color: theme.palette.background.alt,
+              backgroundColor: 'rgba(0, 255, 0, 0.5)', 
+              color: theme.palette.common.black,
               fontSize: "14px",
               fontWeight: "bold",
               padding: "10px 20px",
+              border: '1px solid #fff', // Bordure blanche
+              
+              transition: 'background-color 0.3s ease, transform 0.3s ease', // Transition douce pour le survol
+              '&:hover': {
+                backgroundColor: 'cyan',
+                transform: 'scale(1.2)', 
+            },
             }}
           >
             <DownloadOutlined sx={{ mr: "10px" }} />
@@ -91,7 +98,7 @@ const columns = [
         }}
       >
         {/* ROW 1 */}
-        <StatBox
+        <StatBox 
           title="Total Customers"
           value={data && data.totalCustomers}
           increase="+14%"
